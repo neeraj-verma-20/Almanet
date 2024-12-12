@@ -1,5 +1,4 @@
 /* Global Styles */
-/* Enable smooth scrolling across the page */
 html {
     scroll-behavior: smooth;
 }
@@ -32,7 +31,6 @@ a {
     font-weight: bold;
 }
 
-/* Hamburger Button Styles */
 .hamburger-menu {
     display: flex;
     flex-direction: column;
@@ -50,14 +48,13 @@ a {
     border-radius: 5px;
 }
 
-/* Side Navigation Styles */
 .side-nav {
     height: 100%;
     width: 250px;
     background-color: #001f3f;
     position: fixed;
     top: 0;
-    left: -250px; /* Initially off-screen */
+    left: -250px;
     overflow-x: hidden;
     transition: left 0.3s ease-in-out;
     z-index: 1000;
@@ -93,7 +90,6 @@ a {
     border-radius: 5px;
 }
 
-/* Hero Section */
 .hero {
     background: url('hero-img-new-new.webp') no-repeat center center/cover;
     color: #fff;
@@ -101,95 +97,51 @@ a {
     padding: 5rem 2rem;
 }
 
-/* .hero-content {
-    max-width: 800px;
-    margin: auto;
-    padding: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-} */
-
 .hero-content {
     max-width: 800px;
     margin: auto;
     padding: 1rem;
-    color: #FFFFFF; /* Ensures visibility over darker backgrounds */
-    font-size: 1.5rem; /* Adjusts text size for readability */
-    line-height: 1.6; /* Improves spacing for better legibility */
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Stronger shadow for better contrast */
-    font-family: 'Arial', sans-serif; /* Ensures clean and professional typography */
-    text-align: center; /* Aligns content for a balanced layout */
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
 }
 
 .cta-button {
     display: inline-block;
-    background: linear-gradient(135deg, #ffcc00, #ff9900); /* Gradient effect for a modern look */
+    background: linear-gradient(135deg, #ffcc00, #ff9900);
     color: #fff;
     padding: 0.8rem 2rem;
-    border-radius: 30px; /* Rounded corners for a smooth and professional feel */
+    border-radius: 30px;
     font-size: 1.2rem;
     font-weight: 600;
-    text-transform: uppercase; /* Uppercase text for a bold statement */
-    letter-spacing: 1px; /* Slight space between letters for better readability */
+    text-transform: uppercase;
+    letter-spacing: 1px;
     text-align: center;
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-    border: 2px solid transparent; /* Remove default border */
-    background-clip: padding-box; /* Ensures the border doesn’t overlap */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+    background-clip: padding-box;
 }
 
 .cta-button:hover {
-    background: linear-gradient(135deg, #ff9900, #ffcc00); /* Inverted gradient on hover */
-    transform: translateY(-3px); /* Slight lift effect for better interaction */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow for focus effect */
-    color: #fff; /* Keep the text color white on hover */
-    text-decoration: none; /* Removes the underline */
+    background: linear-gradient(135deg, #ff9900, #ffcc00);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    color: #fff;
+    text-decoration: none;
 }
 
 .cta-button:focus {
-    outline: none; /* Remove the outline on focus */
-    border-color: #ff9900; /* Add a border color for focus state */
+    outline: none;
+    border-color: #ff9900;
 }
 
-
-/* Services Section */
-/* #services {
-    padding: 3rem 2rem;
-    background-color: #f4f4f4;
-    text-align: center;
-}
-
-.service-cards {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.card {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1.5rem;
-    width: 300px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin: 1rem 0;
-}
-
-.card i {
-    font-size: 3rem;
-    color: #001f3f;
-    margin-bottom: 1rem;
-}
-
-.card h3 {
-    color: #333;
-} */
-
-/* Services Section */
 #services {
     padding: 4rem 2rem;
-    background-color: #f9f9f9; /* Light background to make the cards stand out */
+    background-color: #f9f9f9;
     text-align: center;
 }
 
@@ -198,36 +150,40 @@ a {
     font-weight: 600;
     color: #333;
     margin-bottom: 2rem;
-    text-transform: uppercase; /* Uppercase title for emphasis */
-    margin-top: 0%;
+    text-transform: uppercase;
 }
 
+/* Service Cards Section */
 .service-cards {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    flex-wrap: wrap; /* Ensures the cards are responsive on smaller screens */
+    flex-wrap: wrap;
 }
 
 .card {
     background-color: #fff;
     border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 2rem;
-    width: 280px; /* Fixed width for consistency */
+    width: 280px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 300px; /* Ensures consistent height for all cards */
+    display: flex;
+    flex-direction: column; /* Flex layout for stacking */
+    justify-content: space-between; /* Space content evenly */
 }
 
 .card i {
     font-size: 3rem;
-    color: #ff9900; /* Icon color */
+    color: #ff9900;
     margin-bottom: 1rem;
     transition: color 0.3s ease;
 }
 
 .card h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 500;
     color: #333;
     margin-bottom: 1rem;
@@ -238,16 +194,38 @@ a {
     color: #666;
 }
 
+.register-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #ffcc00, #ff9900);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: auto; /* Push button to the bottom */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.register-btn:hover {
+    background: linear-gradient(135deg, #ff9900, #ffcc00);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
 .card:hover {
-    transform: translateY(-10px); /* Hover effect to lift the card */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .card:hover i {
-    color: #ff6600; /* Change icon color on hover */
+    color: #ff6600;
 }
 
-/* Contact Section */
 #contact {
     padding: 3rem 2rem;
     background: #001f3f;
@@ -255,12 +233,6 @@ a {
     color: #fff;
 }
 
-.cta-button {
-    color: #001f3f;
-    background-color: #ffcc00;
-}
-
-/* Footer */
 footer {
     background: #001f3f;
     color: #fff;
@@ -291,7 +263,6 @@ footer {
     color: #ffcc00;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -302,7 +273,6 @@ footer {
         display: flex;
     }
 
-    /* Hide side-nav initially */
     .side-nav {
         display: block;
     }
