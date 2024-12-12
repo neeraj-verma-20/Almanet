@@ -94,7 +94,7 @@ a {
     background: url('hero-img-new-new.webp') no-repeat center center/cover;
     color: #fff;
     text-align: center;
-    padding: 5rem 2rem;
+    padding: 9rem 2rem;
 }
 
 .hero-content {
@@ -169,10 +169,13 @@ a {
     width: 280px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 300px; /* Ensures consistent height for all cards */
+    height: 300px;
+    /* Ensures consistent height for all cards */
     display: flex;
-    flex-direction: column; /* Flex layout for stacking */
-    justify-content: space-between; /* Space content evenly */
+    flex-direction: column;
+    /* Flex layout for stacking */
+    justify-content: space-between;
+    /* Space content evenly */
 }
 
 .card i {
@@ -204,7 +207,8 @@ a {
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    margin-top: auto; /* Push button to the bottom */
+    margin-top: auto;
+    /* Push button to the bottom */
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.3s ease;
