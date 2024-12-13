@@ -239,6 +239,129 @@ a {
 footer {
     background: #001f3f;
     color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Footer Left Section */
+.footer-left {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-logo {
+    max-width: 150px;
+    margin-bottom: 1rem;
+}
+
+.footer-left p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Footer Middle Section */
+.footer-middle {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.footer-middle h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-middle p {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.footer-middle .cta-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(135deg, #ff9900, #ff6600);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-middle .cta-button:hover {
+    background: linear-gradient(135deg, #ff6600, #ffcc00);
+}
+
+/* Footer Right Section */
+.footer-right {
+    flex: 1;
+    min-width: 250px;
+}
+
+.subscribe-form {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.subscribe-form input[type="email"] {
+    flex: 1;
+    padding: 0.8rem;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+.subscribe-form button {
+    padding: 0.8rem 1rem;
+    background: #ff6600;
+    border: none;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.subscribe-form button:hover {
+    background: #ffcc00;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left, .footer-middle, .footer-right {
+        text-align: center;
+    }
+}
+
+
+/* Contact Section */
+#contact {
+    padding: 3rem 2rem;
+    background: #001f3f;
+    text-align: center;
+    color: #fff;
+}
+
+/* Footer Styles */
+footer {
+    background: #001f3f;
+    color: #fff;
     text-align: center;
     padding: 2rem;
 }
@@ -274,9 +397,9 @@ footer {
     margin: 2rem auto;
     width: 100%;
     max-width: 400px;
-    background: linear-gradient(135deg, #001f3f, #001f3f);
+    /* background: linear-gradient(135deg, #001f3f, #001f3f); */
     border-radius: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
     padding: 0.5rem;
 }
 
@@ -319,6 +442,14 @@ footer {
 
 .subscribe-form button:focus {
     outline: none;
+}
+
+.contact-us{
+    margin: 0;
+}
+
+.footer-social{
+    margin: 0.5rem;
 }
 
 /* Responsive Styles */
@@ -367,11 +498,4 @@ footer {
         align-items: flex-start;
     }
 
-    .hamburger-menu {
-        display: flex;
-    }
-
-    .side-nav {
-        display: block;
-    }
 }
