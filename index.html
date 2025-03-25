@@ -21,6 +21,13 @@
             margin-top: 40px;
         }
 
+        p {
+            text-align: center;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 30px;
+        }
+
         form {
             background-color: #ffffff;
             max-width: 600px;
@@ -73,10 +80,6 @@
             margin-bottom: 25px;
         }
 
-        .form-group select {
-            background-color: #fff;
-        }
-
         .hidden {
             display: none;
         }
@@ -86,10 +89,11 @@
 <body>
 
     <h1>Consulting Services Registration Form</h1>
+    <p>Please fill in all the details below to register for our consulting services. We appreciate your interest!</p>
 
-    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DWU00000APOar" method="POST">
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DWU00000APOar" method="POST" onsubmit="return showThankYouMessage()">
         <input type="hidden" name="oid" value="00DWU00000APOar">
-        <input type="hidden" name="retURL" value="https://neeraj-verma-20.github.io/Almanet/">
+        <input type="hidden" name="retURL" value="https://almanet.in/">
 
         <label for="first_name">First Name</label>
         <input id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
@@ -148,13 +152,18 @@
         function toggleParticipantsField() {
             const trainingType = document.getElementById('training_type').value;
             const participantsField = document.getElementById('participants_field');
-            // Show the participants field only for Corporate training
             if (trainingType === 'Corporate') {
                 participantsField.classList.remove('hidden');
             } else {
                 participantsField.classList.add('hidden');
             }
         }
+
+        function showThankYouMessage() {
+            alert('Thank you for registering! You will be redirected to our website.');
+            return true;
+        }
     </script>
+
 </body>
 </html>
